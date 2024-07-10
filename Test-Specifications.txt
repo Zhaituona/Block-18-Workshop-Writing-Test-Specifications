@@ -1,0 +1,91 @@
+Unit Tests:
+1. A function called "multiplication" that returns the product of the two input numbers.
+
+Test cases: 
+1. Two input both are numbers should be return numbers. 
+2. Two input one is positive number another input is zero would return zero. 
+3. Two input one is negative number another input is positive number would return negative number.
+4. Two input both are negative number will return negative number. 
+5. Two input both are zero would be return zero. 
+6. Two input one is string another one is number we should convert string to number then do the multiplication. 
+7. Two input both not given will be return null. 
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+2. A function called "concatOdds" takes two arrays of integers as arguments. It should return a single array that only contains the odd numbers, in ascending order, from both of the arrays.
+Example: concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1])
+...should result in [-1, 1, 3, 9, 15]
+Think about the following; you may need to make assumptions or decisions about the prompt and how the code should behave:
+What should happen with unexpected inputs?
+What kinds of unexpected inputs should we worry about?
+What should happen when there are multiples of the same odd number in the arrays? (Hint: We gave you the answer to this one in the example above.)
+
+
+Test cases: 
+1. Two arguments both are odd integers  should be the return sorted array of unique odd numbers. 
+2. Two arguments both are even integers  should be the return empty array as no odd numbers. 
+3. Two arguments one of them is odd integers another one is even integers  should be returns the array containing the unique odd numbers from the odd integers array. 
+4. Two argument one of them is zero another one is odd integers  should be return the array containing the unique odd numbers from the odd integers array.
+5. Two arguments one of them is zero another one is even interger  should be return empty array as no odd numbers.  
+6. Two arguments one of them is Object another one is even integer  should be return empty array as no odd numbers.
+7. Two arguments one of them is Object another one is odd integer  should be return the array containing the unique odd numbers from the array of odd integers.
+8. Two arguments both of them are Objects should be return the empty array as there are no odd numbers
+9. Two arguments one of them is String another one is Odd integer should be return the array containing the unique odd numbers from the array of odd integers.
+10. Two arguments one of them is String another one is Even integer should be return the empty array as there are no odd numbers. 
+11. Two arguments no any arguments given  should be return [] . 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Functional Tests:
+A shopping cart checkout feature that allows a user to check out as a guest (without an account), or as a logged-in user. They should be allowed to do either, but should be asked if they want to create an account or log in if they check out as a guest.
+Think about the following; you may need to make assumptions or decisions about the prompt and how the feature should behave:
+What should happen if the cart is empty?
+What needs to be shown to the user at each step of check out?
+What behaviors of this feature does the prompt miss or gloss over?
+Hint: Observe the shopping cart and checkout features of some popular websites to get some ideas!
+
+Test cases :
+ 1. Given user login as guest 
+    When user able to navigate to the Home page
+    Then user able to search the item would like to add to the cart
+    Then user select the item and added to the cart 
+    Then user able to check out item via payment method
+
+    2. Given user login as guest 
+       When user able to navigate to the Home page 
+       Then user able to search the item would like to add to the cart 
+       Then user select the item and added to the cart 
+       Then user delete the added item from the cart 
+       Then user get the confirmation model on the cart page 
+       Then user able to successfully delete the item from cart
+
+    3. Given user loing as guest 
+       When display the option in the login page 
+       Then user create login account provide username and password and email 
+       Then display the confirmation pop-up as user will get verification email for the user account creation 
+    
+    4. Given user login as valid account user 
+       When user able to navigate to the Home page 
+       Then user able to search the item would like to added to the cart 
+       Then user select the item and added to the cart
+       Then user navigate to the checkout page 
+       Then user provide checkout details 
+       Then user provide the shipping method 
+       Then user able confirm the payment 
+       Then user should able to view the confirmed order details
+
+    5. Given user login as invalid account user
+       When user provide the corrent username and incorrect password 
+       Then user should seeing error message
+       Then user should not be able to login to the Home Page 
+
+    6. Given user login as invalid account user 
+       When user provide the wrong username and correct passwrod 
+       Then user should seeing error message 
+       Then user should not be able to login to the Home page 
+
